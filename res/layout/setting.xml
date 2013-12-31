@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:background="@xml/setting_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioGroup android:orientation="vertical" android:id="@id/setting_radiogroup" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:textColor="@color/theme_green_dark" android:id="@id/setting_radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@xml/radiobutton" android:text="@string/setting_mode1" />
+                <RadioButton android:textColor="@color/theme_green_dark" android:id="@id/setting_radio2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@xml/radiobutton" android:text="@string/setting_mode2" />
+                <RadioButton android:textColor="@color/theme_green_dark" android:id="@id/setting_radio3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@xml/radiobutton" android:text="@string/setting_mode3" />
+            </RadioGroup>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/setting_clearache" android:background="@xml/setting_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <Button android:id="@id/setting_new" android:background="@xml/setting_findnew" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+                <TextView android:textSize="18.0sp" android:textColor="@color/theme_green_dark" android:id="@id/setting_versionid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="\u0009当前版本：beat0.99999999999-999" />
+                <Button android:id="@id/setting_about" android:background="@drawable/setting_aboutus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+                <TextView android:textSize="18.0sp" android:textColor="@color/theme_green_dark" android:id="@id/setting_versionid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/setting_phone" />
+                <Button android:id="@id/setting_test" android:background="@xml/setting_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/conver_talklist_ico" android:background="@drawable/jiaoliu_talk_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/theme_green_dark" android:id="@id/conver_talklist_title" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="title" android:singleLine="true" android:layout_toRightOf="@id/conver_talklist_ico" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/theme_green_dark" android:id="@id/conver_talklist_content" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="撒谎发嗲顺丰i啊约瑟夫i啊话费卡乱收费卡拉很舒服绿卡..." android:layout_below="@id/conver_talklist_title" android:layout_alignLeft="@id/conver_talklist_title" android:layout_alignBottom="@id/conver_talklist_ico" />
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/theme_green_dark" android:gravity="bottom|left|center" android:id="@id/conver_talklist_backnum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12" android:drawableLeft="@drawable/jiaoliu_talk_icon_back" android:layout_alignRight="@id/conver_talklist_content" android:layout_alignBottom="@id/conver_talklist_ico" />
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="main_bt1" />
+    <item type="id" name="main_bt2" />
+    <item type="id" name="main_bt3" />
+    <item type="id" name="main_bt4" />
+    <item type="id" name="main_framacti" />
+    <item type="id" name="main_bac" />
+    <item type="id" name="bofang_listview" />
+    <item type="id" name="bofang_seekbar" />
+    <item type="id" name="bofang_timepos" />
+    <item type="id" name="bofang_btpre" />
+    <item type="id" name="bofang_animlo" />
+    <item type="id" name="bofang_btplayche" />
+    <item type="id" name="bofang_btnext" />
+    <item type="id" name="bofang_manag" />
+    <item type="id" name="bofang_dopaly" />
+    <item type="id" name="bofang_manviewlayout" />
+    <item type="id" name="bofang_manliebiao" />
+    <item type="id" name="bofang_lond" />
+    <item type="id" name="bofang_manpaixu" />
+    <item type="id" name="bofang_listitem_title" />
+    <item type="id" name="bofang_listitem_time" />
+    <item type="id" name="bofang_listitem_chec" />
+    <item type="id" name="bofang_listitem_del" />
+    <item type="id" name="bofang_control" />
+    <item type="id" name="down_imnet" />
+    <item type="id" name="down_imlocal" />
+    <item type="id" name="down_imconver" />
+    <item type="id" name="down_imset" />
+    <item type="id" name="netmusic_control" />
+    <item type="id" name="netmusic_pic1" />
+    <item type="id" name="netmusic_pic2" />
+    <item type="id" name="netmusic_pic3" />
+    <item type="id" name="net_animlo" />
+    <item type="id" name="netmusic_listview" />
+    <item type="id" name="netmusic_seekbar" />
+    <item type="id" name="netmusic_timepos" />
+    <item type="id" name="netmusic_btpre" />
+    <item type="id" name="netmusic_btplayche" />
+    <item type="id" name="netmusic_btnext" />
+    <item type="id" name="netmusic_down" />
+    <item type="id" name="netmusic_sleep" />
+    <item type="id" name="sleep_radio15" />
+    <item type="id" name="sleep_radio30" />
+    <item type="id" name="sleep_radio45" />
+    <item type="id" name="sleep_radio60" />
+    <item type="id" name="sleep_radio90" />
+    <item type="id" name="sleep_radioedit" />
+    <item type="id" name="sleep_edit" />
+    <item type="id" name="sleep_text" />
+    <item type="id" name="setting_radiogroup" />
+    <item type="id" name="setting_radio1" />
+    <item type="id" name="setting_radio2" />
+    <item type="id" name="setting_radio3" />
+    <item type="id" name="setting_clearache" />
+    <item type="id" name="setting_new" />
+    <item type="id" name="setting_versionid" />
+    <item type="id" name="setting_about" />
+    <item type="id" name="setting_about_back" />
+    <item type="id" name="setting_test" />
+    <item type="id" name="setting_test_back" />
+    <item type="id" name="setting_test_lv" />
+    <item type="id" name="setting_test_btsend" />
+    <item type="id" name="conver_btnewtalk" />
+    <item type="id" name="convert_animlo" />
+    <item type="id" name="conver_searchedit" />
+    <item type="id" name="conver_searchbt" />
+    <item type="id" name="conver_talklv" />
+    <item type="id" name="conver_scollv" />
+    <item type="id" name="conver_doleft" />
+    <item type="id" name="conver_doright" />
+    <item type="id" name="conver_gridview" />
+    <item type="id" name="conver_lltpage" />
+    <item type="id" name="conver_contentlly" />
+    <item type="id" name="conver_londinglly" />
+    <item type="id" name="conver_pageitemcheck" />
+    <item type="id" name="conver_pageitemtv" />
+    <item type="id" name="conver_talklist_ico" />
+    <item type="id" name="conver_talklist_title" />
+    <item type="id" name="conver_talklist_content" />
+    <item type="id" name="conver_talklist_backnum" />
+    <item type="id" name="conver_btnewtalk_talkinfo" />
+    <item type="id" name="conver_searchedit_talkinfo" />
+    <item type="id" name="conver_searchbt_talkinfo" />
+    <item type="id" name="conver_title_talkinfo" />
+    <item type="id" name="conver_content_talkinfo" />
+    <item type="id" name="conver_lv_talkinfo" />
+    <item type="id" name="conver_edit_talkinfo" />
+    <item type="id" name="conver_toback_talkinfo" />
+    <item type="id" name="conver_send_talkinfo" />
+    <item type="id" name="conver_lly1_talkinfo" />
+    <item type="id" name="conver_lly2_talkinfo" />
+    <item type="id" name="talkinfo_animlo" />
+    <item type="id" name="conver_tba_ip" />
+    <item type="id" name="conver_tba_content" />
+    <item type="id" name="conver_tba_time" />
+    <item type="id" name="conver_searchedit_newtalk" />
+    <item type="id" name="conver_searchbt_newtalk" />
+    <item type="id" name="conver_edittitle_newtalk" />
+    <item type="id" name="conver_editcontent_newtalk" />
+    <item type="id" name="conver_send_newtalk" />
+    <item type="id" name="drag_handle" />
+    <item type="id" name="click_remove" />
+    <item type="id" name="webview">false</item>
+    <item type="id" name="imageView">false</item>
+    <item type="id" name="jiantou">false</item>
+    <item type="id" name="imageviewjiantou">false</item>
+    <item type="id" name="playItem">false</item>
+    <item type="id" name="sleepdefinetime">false</item>
+    <item type="id" name="sleep_btok">false</item>
+    <item type="id" name="sleep_btcn">false</item>
+    <item type="id" name="ad_banner">false</item>
+    <item type="id" name="i1">false</item>
+    <item type="id" name="i2">false</item>
+    <item type="id" name="i3">false</item>
+    <item type="id" name="ttttttttb">false</item>
+    <item type="id" name="ring_more_wenjuan">false</item>
+    <item type="id" name="rb11">false</item>
+    <item type="id" name="rb12">false</item>
+    <item type="id" name="rb13">false</item>
+    <item type="id" name="rb21">false</item>
+    <item type="id" name="rb22">false</item>
+    <item type="id" name="rb23">false</item>
+    <item type="id" name="rb31">false</item>
+    <item type="id" name="rb32">false</item>
+    <item type="id" name="rb33">false</item>
+    <item type="id" name="rb41">false</item>
+    <item type="id" name="rb42">false</item>
+    <item type="id" name="rb43">false</item>
+    <item type="id" name="rb51">false</item>
+    <item type="id" name="rb52">false</item>
+    <item type="id" name="rb53">false</item>
+    <item type="id" name="setting_test_btsend123">false</item>
+    <item type="id" name="sellrel">false</item>
+    <item type="id" name="sleep_close">false</item>
+    <item type="id" name="baoyi">false</item>
+    <item type="id" name="byWebView1">false</item>
+</resources>

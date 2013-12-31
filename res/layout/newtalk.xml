@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:background="@drawable/jiaoliu_newtalk" android:layout_width="80.0dip" android:layout_height="45.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:background="@drawable/jiaoliu_search_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="30.0dip" android:layout_weight="1.0">
+            <EditText android:textSize="13.0sp" android:textColor="@color/theme_green_dark" android:id="@id/conver_searchedit_newtalk" android:background="@color/alpha0" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:hint="@string/convert_searchhint" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:id="@id/conver_searchbt_newtalk" android:background="@xml/serar" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="6.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:background="@drawable/cline" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:paddingTop="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:background="@drawable/jiaoliu_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+        <EditText android:id="@id/conver_edittitle_newtalk" android:background="@drawable/jiaoliu_backtalk_titleedit" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:hint="请输入发帖标题" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <EditText android:gravity="top|left|center" android:id="@id/conver_editcontent_newtalk" android:background="@drawable/jiaoliu_backtalk_contentedit" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:hint="请在此输入" android:layout_weight="1.0" />
+    <Button android:layout_gravity="right" android:id="@id/conver_send_newtalk" android:background="@xml/talk_back_fabu" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

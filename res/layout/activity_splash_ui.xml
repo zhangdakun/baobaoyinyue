@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.by.update.ByWebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/imageView" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/splashbg" android:scaleType="fitXY" />
+    <LinearLayout android:layout_gravity="right|center" android:orientation="horizontal" android:id="@id/jiantou" android:paddingTop="130.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/imageviewjiantou" android:layout_width="wrap_content" android:layout_height="18.0dip" android:src="@anim/xiaowu1" android:scaleType="fitEnd" />
+        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="滑动进入" />
+    </LinearLayout>
+</FrameLayout>

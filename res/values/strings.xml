@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ani_time">250</string>
+    <string name="ani_time2">500</string>
+    <string name="ani_timestartof">150</string>
+    <string name="app_name">宝宝听音乐</string>
+    <string name="ok">确定</string>
+    <string name="chance">取消</string>
+    <string name="bofang_liebiao">"按住右边按钮键可拖动排序
+选择曲目后向左或右滑动可删除"</string>
+    <string name="bofang_sdnone">未发现SD卡</string>
+    <string name="sleep_paixu">进入睡眠模式倒计时</string>
+    <string name="sleep_15">15分钟</string>
+    <string name="sleep_30">30分钟</string>
+    <string name="sleep_45">45分钟</string>
+    <string name="sleep_60">60分钟</string>
+    <string name="sleep_90">90分钟</string>
+    <string name="sleep_edit">自定义</string>
+    <string name="bofang_listfotter">正在搜索并加载您手机中未载入的音乐...</string>
+    <string name="net_listfotter">正在搜索网络音乐...</string>
+    <string name="talkinfo_listfotter">正在加载回复...</string>
+    <string name="conver_listfotter">正在加载帖子信息...</string>
+    <string name="convert_searchhint">搜索帖子的内容吧~</string>
+    <string name="setting_mode2">列表循环</string>
+    <string name="setting_mode1">单曲循环</string>
+    <string name="setting_mode3">随机播放</string>
+    <string name="setting_phone">"\u0009客服电话029-68969818
+\u0009邮箱反馈：android@xabaoyi.com"</string>
+    <string name="setting_aboutuscontent">"\u0009\u0009西安宝亿电子科技有限公司是一家从事于安卓应用与游戏的软件开发商，短短几年来在互联网领域和安卓应用都得到各界的好评并深得用户的的喜爱，公司在大家的支持下逐步壮大，我们坚信，宝亿的未来有您的参与会更灿烂。
+\u0009\u0009宝宝音乐是我们专注于宝宝启蒙成长教育而开发的一款应用，适用家长在当下快节奏的生活方式下给宝宝一个温暖美好的音乐记忆，我们竭诚为宝宝们设计能够开启他们无限潜能与智慧的网络应用。
+\u0009\u0009宝宝是您的未来，更是我们的希望，我们一直在您身后，支持宝宝们的每一步前行~~~
+\u0009\u0009希望广大用户为我们提出更好的建议与意见，有了您的支持今后我们将更加努力，我们愿为您创造一个更好的网络应用平台。
+
+\u0009\u0009联系我们
+\u0009\u0009邮箱：android@xabaoyi.com
+\u0009\u0009QQ：1715859756
+\u0009\u0009电话：029-68969818"</string>
+    <string name="q1">你觉得宝宝音乐软件内容怎么样？</string>
+    <string name="q2">你觉得宝宝音乐软件的界面风格怎么样？</string>
+    <string name="q3">你觉得宝宝音乐软件操作习惯怎么样？</string>
+    <string name="q4">你觉得宝宝音乐内容更新速度怎么样？</string>
+    <string name="q5">你觉得宝宝音乐音质怎么样？</string>
+    <string name="aa1">一般</string>
+    <string name="aa2">全面</string>
+    <string name="aa3">很全面</string>
+    <string name="aa11">一般</string>
+    <string name="aa22">喜欢</string>
+    <string name="aa33">很喜欢</string>
+    <string name="aa111">一般</string>
+    <string name="aa222">不错</string>
+    <string name="aa333">非常好</string>
+    <string name="aa14">一般</string>
+    <string name="aa24">很快</string>
+    <string name="aa34">非常快</string>
+    <string name="age1">一般</string>
+    <string name="age2">很好</string>
+    <string name="age3">非常好</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_remove_mode">Remove modes</string>
+    <string name="select_drag_init_mode">Start-drag modes</string>
+    <string name="select_enables">Enable/Disable</string>
+    <string name="add_header">Add header</string>
+    <string name="add_footer">Add footer</string>
+</resources>

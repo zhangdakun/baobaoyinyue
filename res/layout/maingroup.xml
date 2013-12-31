@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bofang_background"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@id/main_bac"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/down_bac"
+        android:gravity="bottom" >
+
+        <Button
+            android:id="@id/main_bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@xml/down_netmusic" />
+
+        <Button
+            android:id="@id/main_bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/down_local_pressed" />
+
+        <Button
+            android:id="@id/main_bt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/down_conver_pressed" />
+
+        <Button
+            android:id="@id/main_bt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/down_setting_pressed"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+<!--     <com.nd.dianjin.AdBanner
+        android:id="@id/ad_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> -->
+
+</LinearLayout>

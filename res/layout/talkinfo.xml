@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@id/conver_btnewtalk_talkinfo"
+            android:layout_width="80.0dip"
+            android:layout_height="45.0dip"
+            android:background="@xml/conver_newtalk" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/jiaoliu_search_edit"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@id/conver_searchedit_talkinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_weight="1.0"
+                android:background="@color/alpha0"
+                android:hint="@string/convert_searchhint"
+                android:paddingLeft="15.0dip"
+                android:singleLine="true"
+                android:textColor="@color/theme_green_dark"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@id/conver_searchbt_talkinfo"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="@xml/serar" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cline" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hualan" />
+
+        <TextView
+            android:id="@id/conver_title_talkinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="title,titletitle"
+            android:textColor="@color/theme_green_dark"
+            android:textSize="30.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:scrollbars="none" >
+
+        <TextView
+            android:id="@id/conver_content_talkinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\u0009aaaaaaaaaaaaaaaaaaaaaaaa"
+            android:textColor="@color/theme_green_dark"
+            android:textSize="18.0sp" />
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/theme_green_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@id/conver_lly1_talkinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/jiaoliu_huifu_pingluntag"
+                    android:gravity="center_vertical"
+                    android:text="最新评论"
+                    android:textColor="@color/theme_green_dark"
+                    android:textSize="20.0sp" />
+
+                <Button
+                    android:id="@id/conver_toback_talkinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@xml/conver_toback" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@id/conver_lv_talkinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5.0dip"
+                android:cacheColorHint="@color/alpha0"
+                android:divider="@color/theme_green_dark"
+                android:dividerHeight="1.0px"
+                android:fadingEdge="none"
+                android:footerDividersEnabled="false"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/conver_lly2_talkinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@id/conver_edit_talkinfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:gravity="top|left|center"
+                        android:hint="请输入您要说的话" />
+
+                    <Button
+                        android:id="@id/conver_send_talkinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/talkback_send" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

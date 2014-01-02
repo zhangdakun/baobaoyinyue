@@ -1,30 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:layout_gravity="right" android:id="@id/netmusic_pic3" android:background="@drawable/wangluo_pic3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" />
-        <ImageView android:layout_gravity="left" android:id="@id/netmusic_pic2" android:background="@drawable/wangluo_pic2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" />
-        <ImageView android:layout_gravity="center_horizontal" android:id="@id/netmusic_pic1" android:background="@drawable/wangluo_pic1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" />
-        <ImageView android:layout_gravity="left" android:id="@id/i1" android:background="@drawable/new_hasset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="80.0dip" />
-        <ImageView android:layout_gravity="center_horizontal" android:id="@id/i2" android:background="@drawable/new_hasset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" />
-        <ImageView android:layout_gravity="right" android:id="@id/i3" android:background="@drawable/new_hasset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:layout_marginRight="40.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@id/netmusic_pic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="40.0dip"
+            android:visibility="invisible"
+            android:background="@drawable/wangluo_pic3" />
+
+        <ImageView
+            android:id="@id/netmusic_pic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="40.0dip"
+            android:visibility="invisible"
+            android:background="@drawable/wangluo_pic2" />
+
+        <ImageView
+            android:id="@id/netmusic_pic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30.0dip"
+            android:visibility="invisible"
+            android:background="@drawable/wangluo_pic1" />
+
+        <ImageView
+            android:id="@id/i1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="40.0dip"
+            android:layout_marginTop="80.0dip"
+            android:visibility="invisible"
+            android:background="@drawable/new_hasset" />
+
+        <ImageView
+            android:id="@id/i2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40.0dip"
+            android:background="@drawable/new_hasset"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/i3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="40.0dip"
+            android:layout_marginTop="80.0dip"
+            android:background="@drawable/new_hasset"
+            android:visibility="gone" />
     </FrameLayout>
-    <ListView android:id="@id/netmusic_listview" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/alpha0" android:divider="@drawable/list_driven" android:layout_weight="1.0" />
-    <LinearLayout android:orientation="vertical" android:id="@id/netmusic_control" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textStyle="bold" android:textColor="@color/theme_green_dark" android:layout_gravity="right" android:id="@id/netmusic_timepos" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="18:18" />
-        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <SeekBar android:id="@id/netmusic_seekbar" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="3.0dip" android:clickable="false" android:layout_width="290.0dip" android:layout_height="wrap_content" android:maxHeight="6.0dip" android:max="200" android:progress="0" android:progressDrawable="@drawable/seekbarstyle" android:minHeight="6.0dip" android:thumb="@drawable/bofang_seekerbarpos" style="?android:attr/progressBarStyleHorizontal" />
+
+    <ListView
+        android:id="@id/netmusic_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:cacheColorHint="@color/alpha0"
+        android:divider="@drawable/list_driven"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@id/netmusic_control"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/netmusic_timepos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="5.0dip"
+            android:paddingRight="20.0dip"
+            android:text="18:18"
+            android:textColor="@color/theme_green_dark"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <SeekBar
+                android:id="@id/netmusic_seekbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="290.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:max="200"
+                android:maxHeight="6.0dip"
+                android:minHeight="6.0dip"
+                android:paddingBottom="3.0dip"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbarstyle"
+                android:thumb="@drawable/bofang_seekerbarpos" />
         </LinearLayout>
-        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
-                <Button android:id="@id/netmusic_down" android:background="@xml/netmusic_download" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-                <Button android:id="@id/netmusic_sleep" android:background="@xml/netmusic_sleeping" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@id/netmusic_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@xml/netmusic_download" />
+
+                <Button
+                    android:id="@id/netmusic_sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30.0dip"
+                    android:background="@xml/netmusic_sleeping" />
             </LinearLayout>
-            <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <Button android:id="@id/netmusic_btpre" android:background="@xml/bofang_pre" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-                <CheckBox android:id="@id/netmusic_btplayche" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:checked="true" android:button="@xml/playcheck" />
-                <Button android:id="@id/netmusic_btnext" android:background="@xml/bofang_next" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="15.0dip" >
+
+                <Button
+                    android:id="@id/netmusic_btpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@xml/bofang_pre" />
+
+                <CheckBox
+                    android:id="@id/netmusic_btplayche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:button="@xml/playcheck"
+                    android:checked="true" />
+
+                <Button
+                    android:id="@id/netmusic_btnext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@xml/bofang_next" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

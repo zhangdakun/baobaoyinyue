@@ -11,6 +11,8 @@ import com.baoyi.guoyiyun.babymusic.LocalMuiscFragmen;
 import com.baoyi.guoyiyun.babymusic.NetFragmen;
 import com.baoyi.guoyiyun.bean.MusicBean;
 import com.baoyi.guoyiyun.constant.Constant;
+import com.baoyi.utils.Trace;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -84,6 +86,30 @@ public class MediaplayUtil
 //                sendselection(i);
 //                if(true) goto _L2; else goto _L6
 //_L6:
+            	if(MediaplayUtil.mslv == null)
+            		return;
+            	switch ( Constant.musicplaymode) {
+				case 0:
+					start(MediaplayUtil.mslv, position);
+					break;
+				case 1:
+	                MediaplayUtil mediaplayutil = MediaplayUtil.this;
+	                mediaplayutil.position = 1 + mediaplayutil.position;
+	                if(position == MediaplayUtil.mslv.size())
+	                    start(MediaplayUtil.mslv, 0);
+	                else
+	                    start(MediaplayUtil.mslv, position);
+	                sendselection(position);
+					break;
+				case 2:
+	                int i = (int)(Math.random() * (double)MediaplayUtil.mslv.size());
+	                start(MediaplayUtil.mslv, i);
+	                sendselection(i);
+					break;
+
+				default:
+					break;
+				}
             }
 
 //            final MediaplayUtil this$0;
@@ -139,6 +165,34 @@ public class MediaplayUtil
 //        }
 //        if(true) goto _L6; else goto _L5
 //_L5:
+    	Trace.d("MediaplayUtil", "sendposition, typeb ,"+typeb+", thfirst ,"+thfirst+", mp, "+mp.isPlaying()+",b , "+b);
+    	if(!thfirst || !mp.isPlaying()) 
+    		return;
+    	if(typeb) {
+          Message message1 = LocalMuiscFragmen.hand.obtainMessage();
+          message1.what = 1;
+          message1.arg1 = mp.getCurrentPosition();
+          int i = ((MusicBean)mslv.get(position)).getTime();
+          message1.arg2 = (int)(200F * ((float)message1.arg1 / (float)i));
+          LocalMuiscFragmen.hand.sendMessage(message1);  	
+          Trace.d("media","send 1");
+    	} else {
+          if(NetFragmen.hand != null && bthhstart)
+          {
+              Message message = NetFragmen.hand.obtainMessage();
+              message.what = 5;
+              message.arg1 = mp.getCurrentPosition();
+              message.arg2 = (int)(200F * ((float)message.arg1 / (float)urlmusictime));
+              NetFragmen.hand.sendMessage(message);
+              Trace.d("media ","send 5");
+          }
+    	}
+    	
+      if(!b)
+      {
+          mp.stop();
+          mp.release();
+      }
     }
 
     private void sendselection(int i)
@@ -210,7 +264,38 @@ public class MediaplayUtil
 //        sendselection(i);
 //        if(true) goto _L2; else goto _L6
 //_L6:
-        return false;
+        if(mslv == null)
+        	return false;
+        
+	      if(!mp.isPlaying())
+	      {
+	          mp.stop();
+	          mp.reset();
+	          flag = true;
+	      }
+        switch (Constant.musicplaymode) {
+		case 0:
+			start(mslv, position);
+			break;
+		case 1:
+	        position = 1 + position;
+	        if(position == mslv.size())
+	            start(mslv, 0);
+	        else
+	            start(mslv, position);
+	        sendselection(position);
+			break;
+		case 2:
+	        int i = (int)(Math.random() * (double)mslv.size());
+	        start(mslv, i);
+	        sendselection(i);
+			break;
+
+		default:
+			break;
+		}
+        
+        return flag;
     }
 
     public void pause()
@@ -255,7 +340,37 @@ public class MediaplayUtil
 //        sendselection(i);
 //        if(true) goto _L2; else goto _L6
 //_L6:
-        return false;
+        if(mslv == null)
+        	return false;
+      if(!mp.isPlaying())
+      {
+          mp.stop();
+          mp.reset();
+          flag = true;
+      }
+      
+      switch (Constant.musicplaymode) {
+		case 0:
+			start(mslv, position);
+			break;
+		case 1:
+	        position = -1 + position;
+	        if(position < 0)
+	            start(mslv, -1 + mslv.size());
+	        else
+	            start(mslv, position);
+	        sendselection(position);			
+			break;
+		case 2:
+	        int i = (int)(Math.random() * (double)mslv.size());
+	        start(mslv, i);
+	        sendselection(i);
+			break;
+	
+		default:
+			break;
+      }
+      return flag;
     }
 
     public void restart()
@@ -327,12 +442,16 @@ public class MediaplayUtil
                     NetFragmen.hand.sendEmptyMessage(1);
                     urlname = (new StringBuilder("http://iring.wutianxia.com:8999")).append(((MusicBean)MediaplayUtil.mslv.get(position)).getUrl()).toString();
                     Log.i("test", (new StringBuilder("mp.url:")).append(urlname).toString());
-                    if(f.exists())
+                    if(f.exists()) {
                         MediaplayUtil.mp.setDataSource(fs);
-                    else
+                    } else {
                         MediaplayUtil.mp.setDataSource(urlname);
+                    }
+                    Log.i("test", "urlname: "+urlname);
+                    
                     MediaplayUtil.mp.prepare();
                     MediaplayUtil.mp.start();
+                    
                     urlmusictime = MediaplayUtil.mp.getDuration();
                     bthhstart = true;
                     NetFragmen.hand.sendEmptyMessage(2);

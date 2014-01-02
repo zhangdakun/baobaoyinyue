@@ -22,6 +22,7 @@ import com.baoyi.guoyiyun.util.HttpDownloader;
 import com.baoyi.guoyiyun.util.MediaplayUtil;
 import com.baoyi.guoyiyun.utils.RpcUtils2;
 import com.boyi.guoyiyun.adapter.BofangListAdapter;
+import com.cn.baoyi.babysong.R;
 import com.iring.dao.MusicDao;
 import com.iring.entity.Music;
 import com.iring.rpc.MusicRpc;
@@ -49,7 +50,8 @@ public class NetFragmen extends Fragment
                 int i = view.getId();
 //                if(i != 0x7f070022) goto _L2; else goto _L1
 //_L1:
-                if(i== 0x7f070022)
+//                if(i== 0x7f070022)
+                if( R.id.netmusic_pic1 == i)
                 if(basy)
                 {
                     current = 0;
@@ -63,7 +65,8 @@ public class NetFragmen extends Fragment
 //_L4:
 //                return;
 //_L2:
-                if(i == 0x7f070023)
+//                else if(i == 0x7f070023)
+                else if (R.id.netmusic_pic2 == i)
                 {
                     if(basy)
                     {
@@ -75,7 +78,8 @@ public class NetFragmen extends Fragment
                         i3.setVisibility(8);
                     }
                 } else
-                if(i == 0x7f070024)
+//                if(i == 0x7f070024)
+                if(R.id.netmusic_pic3 == i)
                 {
                     if(basy)
                     {
@@ -87,27 +91,31 @@ public class NetFragmen extends Fragment
                         i3.setVisibility(0);
                     }
                 } else
-                if(i == 0x7f07002d)
+//                if(i == 0x7f07002d)
+                if(R.id.netmusic_sleep == i)
                 {
                     Intent intent = new Intent();
                     intent.setClass(NetFragmen.mActivity, SleepActivity.class);
                     startActivity(intent);
                 } else
-                if(i == 0x7f07002b)
+//                if(i == 0x7f07002b)
+                if(R.id.netmusic_btnext == i)
                 {
                     NetFragmen.back = 0;
                     NetFragmen.adapter.setUrlpos(-1);
                     NetFragmen.adapter.setPretype(NetFragmen.nowtype);
                     bgo = MainActivity.mputil.nextMusic();
                 } else
-                if(i == 0x7f070029)
+//                if(i == 0x7f070029)
+                if(R.id.netmusic_btpre == i)
                 {
                     NetFragmen.back = 0;
                     NetFragmen.adapter.setUrlpos(-1);
                     NetFragmen.adapter.setPretype(NetFragmen.nowtype);
                     bgo = MainActivity.mputil.preMusic();
                 } else
-                if(i == 0x7f07002c)
+//                if(i == 0x7f07002c)
+                if(R.id.netmusic_down == i)
                 {
                     MusicBean musicbean = (MusicBean)MainActivity.mputil.getMslv().get(MainActivity.mputil.getPosition());
                     File file = new File((new StringBuilder(String.valueOf(Environment.getExternalStorageDirectory().getAbsolutePath()))).append("/babymusic/song/").append(musicbean.getName()).append(".mp3").toString());
@@ -203,23 +211,55 @@ public class NetFragmen extends Fragment
 
     private void init()
     {
-        lv = (ListView)mParent.findViewById(0x7f070026);
-        btpre = (Button)mParent.findViewById(0x7f070029);
-        btnext = (Button)mParent.findViewById(0x7f07002b);
-        btdownload = (Button)mParent.findViewById(0x7f07002c);
-        btsleep = (Button)mParent.findViewById(0x7f07002d);
-        chkplay = (CheckBox)mParent.findViewById(0x7f07002a);
-        sbmusicpos = (SeekBar)mParent.findViewById(0x7f070027);
-        tv = (TextView)mParent.findViewById(0x7f070028);
-        ivmusictype1 = (ImageView)mParent.findViewById(0x7f070022);
-        ivmusictype2 = (ImageView)mParent.findViewById(0x7f070023);
-        ivmusictype3 = (ImageView)mParent.findViewById(0x7f070024);
-        lly = (LinearLayout)mParent.findViewById(0x7f070021);
-        i1 = (ImageView)mParent.findViewById(0x7f070074);
-        i2 = (ImageView)mParent.findViewById(0x7f070075);
-        i3 = (ImageView)mParent.findViewById(0x7f070076);
-        listfooterview = mActivity.getLayoutInflater().inflate(0x7f030003, null);
-        ivlon = (ImageView)listfooterview.findViewById(0x7f07000f);
+//        lv = (ListView)mParent.findViewById(0x7f070026);
+    	lv = (ListView)mParent.findViewById(R.id.netmusic_listview);
+//        btpre = (Button)mParent.findViewById(0x7f070029);
+    	btpre = (Button)mParent.findViewById(R.id.netmusic_btpre);
+    	
+//        btnext = (Button)mParent.findViewById(0x7f07002b);
+    	btnext = (Button)mParent.findViewById(R.id.netmusic_btnext);
+    	
+//        btdownload = (Button)mParent.findViewById(0x7f07002c);
+    	btdownload = (Button)mParent.findViewById(R.id.netmusic_down);
+    	
+//        btsleep = (Button)mParent.findViewById(0x7f07002d);
+    	btsleep = (Button)mParent.findViewById(R.id.netmusic_sleep);
+    	
+//        chkplay = (CheckBox)mParent.findViewById(0x7f07002a);
+    	chkplay = (CheckBox)mParent.findViewById(R.id.netmusic_btplayche);
+    	
+//        sbmusicpos = (SeekBar)mParent.findViewById(0x7f070027);
+    	sbmusicpos = (SeekBar)mParent.findViewById(R.id.netmusic_seekbar);
+    	
+//        tv = (TextView)mParent.findViewById(0x7f070028);
+    	tv = (TextView)mParent.findViewById(R.id.netmusic_timepos);
+    	
+//        ivmusictype1 = (ImageView)mParent.findViewById(0x7f070022);
+    	ivmusictype1 = (ImageView)mParent.findViewById(R.id.netmusic_pic1);
+    	
+//        ivmusictype2 = (ImageView)mParent.findViewById(0x7f070023);
+    	ivmusictype2 = (ImageView)mParent.findViewById(R.id.netmusic_pic2);
+    	
+//        ivmusictype3 = (ImageView)mParent.findViewById(0x7f070024);
+    	ivmusictype3 = (ImageView)mParent.findViewById(R.id.netmusic_pic3);
+//        lly = (LinearLayout)mParent.findViewById(0x7f070021);
+    	lly = (LinearLayout)mParent.findViewById(R.id.netmusic_control);
+    	
+//        i1 = (ImageView)mParent.findViewById(0x7f070074);
+    	i1 = (ImageView)mParent.findViewById(R.id.i1);
+    	
+//        i2 = (ImageView)mParent.findViewById(0x7f070075);
+    	i2 = (ImageView)mParent.findViewById(R.id.i2);
+    	
+//        i3 = (ImageView)mParent.findViewById(0x7f070076);
+    	i3 = (ImageView)mParent.findViewById(R.id.i3);
+    	
+//        listfooterview = mActivity.getLayoutInflater().inflate(0x7f030003, null);
+    	listfooterview = mActivity.getLayoutInflater().inflate(R.layout.bofang_fotter, null);
+    	
+//        ivlon = (ImageView)listfooterview.findViewById(0x7f07000f);
+    	ivlon = (ImageView)listfooterview.findViewById(R.id.bofang_animlo);
+    	
         frameAnimation = (AnimationDrawable)ivlon.getBackground();
         ivlon.setVisibility(0);
         frameAnimation.start();
@@ -490,7 +530,8 @@ public class NetFragmen extends Fragment
 
     public View onCreateView(LayoutInflater layoutinflater, ViewGroup viewgroup, Bundle bundle)
     {
-        return layoutinflater.inflate(0x7f03000c, viewgroup, false);
+//        return layoutinflater.inflate(0x7f03000c, viewgroup, false);
+    	return layoutinflater.inflate(R.layout.netmusic, viewgroup, false);
     }
 
     public void onHiddenChanged(boolean flag)
@@ -614,11 +655,60 @@ public class NetFragmen extends Fragment
 //_L10:
         	
         	switch (message.what) {
-			case 41:
+			case 1:
 	            if(NetFragmen.mActivity != null)
 	            	NetFragmen.pd.show();
 				break;
-			case 56:
+			case 2:
+	            NetFragmen.pd.cancel();
+	            if(NetFragmen.back == 2)
+	                NetFragmen.chkplay.setChecked(false);
+	            if(NetFragmen.adapter != null)  {
+	            	Iterator iterator = NetFragmen.adapter.getMusics().iterator();
+	            	while(iterator.hasNext()) {
+	            		((MusicBean)iterator.next()).setIschecked(false);
+	            	}
+	              NetFragmen.back = 0;
+	              NetFragmen.chkplay.setEnabled(true);
+	              if(NetFragmen.back == 0)
+	              {
+	                  ((MusicBean)NetFragmen.adapter.getMusics().get(MainActivity.mputil.getPosition())).setIschecked(true);
+	                  NetFragmen.btdownload.setClickable(true);
+	              } else
+	              {
+	                  ((MusicBean)NetFragmen.adapter.getMusics().get(MainActivity.mputil.getPosition())).setIschecked(false);
+	                  NetFragmen.btdownload.setClickable(false);
+	              }
+	              NetFragmen.adapter.notifyDataSetChanged();
+	            }
+				break;
+			case 3:
+				break;
+			case 4:
+	            NetFragmen.frameAnimation.start();
+	            NetFragmen.listfooterview.setVisibility(0);
+				break;
+			case 5:
+	            NetFragmen.sbmusicpos.setProgress(1 + message.arg2);
+	            NetFragmen.sbmusicpos.setSecondaryProgress(message.arg2);
+	            int i = message.arg1;
+	            int j = i / 60000;
+	            String s;
+	            int k;
+	            String s1;
+	            if(j < 10)
+	                s = (new StringBuilder("0")).append(j).toString();
+	            else
+	                s = (new StringBuilder(String.valueOf(""))).append(j).toString();
+	            k = (i % 60000) / 1000;
+	            if(k < 10)
+	                s1 = (new StringBuilder("0")).append(k).toString();
+	            else
+	                s1 = (new StringBuilder(String.valueOf(""))).append(k).toString();
+	            NetFragmen.tv.setText((new StringBuilder(String.valueOf(s))).append(":").append(s1).toString());
+	            if(MainActivity.mputil.getUrlmusictime() != 0)
+	                ((MusicBean)NetFragmen.adapter.getMusics().get(MainActivity.mputil.getPosition())).setTime(MainActivity.mputil.getUrlmusictime());
+	            NetFragmen.adapter.notifyDataSetChanged();
 				break;
 			default:
 				break;

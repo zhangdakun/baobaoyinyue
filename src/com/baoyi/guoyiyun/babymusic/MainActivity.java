@@ -125,13 +125,7 @@ public class MainActivity extends FragmentActivity
 				}
             }
 
-//            final MainActivity this$0;
-//
-//            
-//            {
-//                this$0 = MainActivity.this;
-//                super();
-//            }
+
         }
 ;
     }
@@ -149,33 +143,19 @@ public class MainActivity extends FragmentActivity
                 System.exit(0);
             }
 
-//            final MainActivity this$0;
-//
-//            
-//            {
-//                this$0 = MainActivity.this;
-//                super();
-//            }
         }
 );
-        builder.setNeutralButton("\u8BC4\u4EF7", new android.content.DialogInterface.OnClickListener() {
-
-            public void onClick(DialogInterface dialoginterface, int i)
-            {
-                Intent intent1 = new Intent("android.intent.action.VIEW", Uri.parse((new StringBuilder("market://details?id=")).append(getPackageName()).toString()));
-                intent1.addFlags(0x10000000);
-                startActivity(intent1);
-            }
-
-//            final MainActivity this$0;
+//        builder.setNeutralButton("\u8BC4\u4EF7", new android.content.DialogInterface.OnClickListener() {
 //
-//            
+//            public void onClick(DialogInterface dialoginterface, int i)
 //            {
-//                this$0 = MainActivity.this;
-//                super();
+//                Intent intent1 = new Intent("android.intent.action.VIEW", Uri.parse((new StringBuilder("market://details?id=")).append(getPackageName()).toString()));
+//                intent1.addFlags(0x10000000);
+//                startActivity(intent1);
 //            }
-        }
-);
+//
+//        }
+//);
         builder.setNegativeButton("\u5426", new android.content.DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialoginterface, int i)
@@ -183,13 +163,6 @@ public class MainActivity extends FragmentActivity
                 dialoginterface.dismiss();
             }
 
-//            final MainActivity this$0;
-//
-//            
-//            {
-//                this$0 = MainActivity.this;
-//                super();
-//            }
         }
 );
         builder.show();
@@ -339,7 +312,7 @@ public class MainActivity extends FragmentActivity
         } else
         {
             Exit();
-            flag = super.onKeyDown(i, keyevent);
+//            flag = super.onKeyDown(i, keyevent);
         }
         return flag;
     }

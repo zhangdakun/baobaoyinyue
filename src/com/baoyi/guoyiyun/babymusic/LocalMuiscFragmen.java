@@ -21,6 +21,8 @@ import com.baoyi.guoyiyun.myview.DragSortController;
 import com.baoyi.guoyiyun.myview.DragSortListView;
 import com.baoyi.guoyiyun.util.MediaplayUtil;
 import com.boyi.guoyiyun.adapter.BofangListAdapter;
+import com.cn.baoyi.babysong.R;
+
 import java.io.File;
 import java.io.PrintStream;
 import java.util.*;
@@ -134,10 +136,10 @@ public class LocalMuiscFragmen extends Fragment
 
             public void onClick(View view)
             {
-//                boolean flag;
-//                int i;
-//                flag = false;
-//                i = view.getId();
+                boolean flag;
+                int i;
+                flag = false;
+                i = view.getId();
 //                if(i != 0x7f070011) goto _L2; else goto _L1
 //_L1:
 //                flag = MainActivity.mputil.nextMusic();
@@ -149,6 +151,13 @@ public class LocalMuiscFragmen extends Fragment
 //                    flag = MainActivity.mputil.preMusic();
 //                if(true) goto _L4; else goto _L3
 //_L3:
+                if(R.id.bofang_btnext == i) {
+                	flag = MainActivity.mputil.nextMusic();
+                } else if(R.id.bofang_btpre == i) {
+                	flag = MainActivity.mputil.preMusic();
+                }
+                
+                LocalMuiscFragmen.refadapter(flag);
             }
 
 //            final LocalMuiscFragmen this$0;
@@ -246,6 +255,13 @@ public class LocalMuiscFragmen extends Fragment
 //                    MainActivity.mputil.restart();
 //                if(true) goto _L4; else goto _L3
 //_L3:
+            	if(flag) {
+                  if(!MediaplayUtil.mp.isPlaying())
+                	  MainActivity.mputil.restart();          		
+            	} else {
+                  if(MediaplayUtil.mp.isPlaying())
+                	  MainActivity.mputil.pause();          		
+            	}
             }
 
 //            final LocalMuiscFragmen this$0;
@@ -650,6 +666,46 @@ public class LocalMuiscFragmen extends Fragment
 //            LocalMuiscFragmen.refadapter(false);
 //            if(true) goto _L1; else goto _L7
 //_L7:
+            
+            switch (message.what) {
+			case 1:
+	            LocalMuiscFragmen.sbmusicpos.setProgress(message.arg2);
+	            LocalMuiscFragmen.sbmusicpos.setSecondaryProgress(message.arg2);
+	            int i = message.arg1;
+	            int j = i / 60000;
+	            String s;
+	            int k;
+	            String s1;
+	            if(j < 10)
+	                s = (new StringBuilder("0")).append(j).toString();
+	            else
+	                s = (new StringBuilder(String.valueOf(""))).append(j).toString();
+	            k = (i % 60000) / 1000;
+	            if(k < 10)
+	                s1 = (new StringBuilder("0")).append(k).toString();
+	            else
+	                s1 = (new StringBuilder(String.valueOf(""))).append(k).toString();
+	            LocalMuiscFragmen.tvpos.setText((new StringBuilder(String.valueOf(s))).
+	            		append(":").append(s1).toString());				
+				break;
+			case 2:
+				LocalMuiscFragmen.pd.cancel();
+				break;
+			case 3:
+	            LocalMuiscFragmen.listfooterview.setVisibility(8);
+	            LocalMuiscFragmen.frameAnimation.stop();
+	            LocalMuiscFragmen.adapter.notifyDataSetChanged();				
+				break;
+			case 4:
+	            LocalMuiscFragmen.listfooterview.setVisibility(0);
+	            LocalMuiscFragmen.frameAnimation.start();
+				break;
+			case 5:
+				LocalMuiscFragmen.refadapter(false);
+				break;
+			default:
+				break;
+			}
         }
 
     }

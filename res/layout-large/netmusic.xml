@@ -15,6 +15,7 @@
             android:layout_gravity="right"
             android:layout_marginTop="20.0dip"
             android:background="@drawable/wangluo_pic3"
+            android:visibility="invisible"
             android:paddingRight="20.0dip" />
 
         <ImageView
@@ -24,6 +25,7 @@
             android:layout_gravity="left"
             android:layout_marginTop="20.0dip"
             android:background="@drawable/wangluo_pic2"
+            android:visibility="invisible"
             android:paddingLeft="20.0dip" />
 
         <ImageView
@@ -31,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
             android:layout_marginBottom="30.0dip"
             android:background="@drawable/wangluo_pic1" />
     </FrameLayout>
